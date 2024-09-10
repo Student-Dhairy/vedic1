@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>vedic.com</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css')}}">
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+ <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+
+  <!-- responsive style -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css')}}">
+
+  <!-- style.css.map -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css.map')}}">
+
+  <!-- style.scss -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.scss')}}">
+
+  <!-- bootstrap.js  -->
+  <script type="text/javascript" src="{{ url_for('static',filename='script/bootstrap.js')}}"></script>
+
+<!-- scanner.js -->
+
+<script type="text/javascript" src="{{ url_for('static',filename='script/scanner.js')}}"></script>
+
+<!-- jquery-3.4.1.min -->
+
+<script type="text/javascript" src="{{ url_for('static',filename='script/jquery-3.4.1.js')}}"></script>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css')}}">
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.scss')}}">
+
+  <!-- responsive style -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css')}}">
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <img src="images/file.png" alt="">
+            <span>
+              vedic
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"> About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/service"> Service </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog"> Blog </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- service section -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Services
+        </h2>
+        <img src="images/leaf.png" alt="">
+      </div>
+
+      <div class="service_container">
+        
+        <div class="box">
+          <div class="img-box">
+              <!-- Image Upload  -->
+
+       <div class="container">
+        <h2>Plants Information</h2>
+        <div class="square-box">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <!-- Hidden file input with label styled as a button -->
+                <input type="file" id="image" name="image" accept="image/*" required hidden>
+                <label for="image" class="custom-file-upload">Choose File</label>
+                <button type="button" onclick="uploadImage()">Upload and Identify Plant</button>
+            </form>
+        </div>
+    </div>
+            <img src="images/s2.png" class="img1" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Iamge Upload 
+            </h5>
+            <p>
+              Uplaod Plant Image To Identify And for plant description
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <!-- QR Scanner -->
+
+            <div class="container">
+              <h1><br>QR-Code</h1>
+              <div class="section" id="qr-scanner-section">
+                  <!-- Single QR scanner display -->
+                  <div id="my-qr-reader"></div>
+                  <button id="start-scanning">Start Scanning</button>
+                  <button id="stop-scanning" style="display:none;">Stop Scanning</button>
+              </div>
+              <div class="detail-box">
+                <h5>
+                  <br>Scan QR Code  
+                </h5>
+                <p>
+                  Scan predefined QR code for Plant Information 
+                </p>
+              </div>
+              
+          
+        </div>  
+      </div>
+    </div>
+  </div>
+    <div class="btn-box"></div>
+    <div class="btn-box">
+      <div class="language-selection">
+        <label for="language">Select Language:</label>
+        <select id="language">
+          <option value="english" selected>English</option>
+          <option value="hindi">Hindi</option>
+          <option value="gujarati">gujarati</option>
+        </select>
+      </div>
+    </div>
+  <div>
+          <!-- out put  -->
+          <div id="result"></div>
+          <div id="qr-result" class="qr-result"></div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- end service section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_contact">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="contact.html">
+              <img src="images/location-white.png" alt="">
+              <span>
+                Atmiya University
+              </span>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="">
+              <img src="images/telephone-white.png" alt="">
+              <span>
+                Call : +91 6354754301
+              </span>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="">
+              <img src="images/envelope-white.png" alt="">
+              <span>
+                dhairyaghera402.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-lg-9">
+          <div class="info_form">
+            <form action="">
+              <input type="text" placeholder="Enter your email">
+              <button>
+                subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="info_social">
+            <div>
+              <a href="">
+                <img src="images/fb.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="images/twitter.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="images/linkedin.png" alt="">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="images/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-9 mx-auto">
+          <p>
+            &copy; 2024 All Rights Reserved By 
+            <a href="vedik">vedic.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <script type="text/javascript" src="{{ url_for('static',filename='script/jquery-3.4.1.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static',filename='script/bootstrap.js')}}"></script>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+
+
+</body>
+
+</html>
